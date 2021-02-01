@@ -61,7 +61,7 @@ signed main() {
     int ind = 0;
     int start = 10;
     for (int n = start; n < 1e8; n *= 10) {
-        int tests = 1;
+        int tests = 10;
         for (int w = 0; w < tests; ++w) {
             vd input(n);
             for (double& i : input) {
@@ -111,7 +111,7 @@ signed main() {
 
             input = inputCopy;
             start = std::chrono::high_resolution_clock::now();
-            priorityQueueSort(input);
+            //priorityQueueSort(input);
             finish = std::chrono::high_resolution_clock::now();
             duration = finish - start;
             ans[ind][5] += duration.count();
